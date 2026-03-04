@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Banding.in</title>
+    <link rel="stylesheet" href="style_landing.css">
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-box">in</div>
+            <a href="Landingpage.html">Banding.in</a>
+        </div>
+        <div class="db-icon">
+            <img src="" alt="">
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="card-wrapper">
+            <div class="card">
+                <input type="text" placeholder="Nama Produk">
+                <input type="text" placeholder="Kategori">
+                <input type="text" placeholder="Harga">
+            </div>
+            <div class="card">
+                <input type="text" placeholder="Nama Produk">
+                <input type="text" placeholder="Kategori">
+                <input type="text" placeholder="Harga">
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <button class="btn tambah">Tambah Kartu</button>
+            <button class="btn banding">Bandingkan</button>
+        </div>
+
+    </div>
+    
+    <script>
+        const tombolTambah = document.querySelector(".tambah");
+        const cardWrapper = document.querySelector(".card-wrapper");
+
+        tombolTambah.addEventListener("click", function () {
+            const cardBaru = document.createElement("div");
+            cardBaru.classList.add("card");
+
+            cardBaru.innerHTML = `
+                <input type="text" placeholder="Nama Produk">
+                <input type="text" placeholder="Kategori">
+                <input type="text" placeholder="Harga">
+            `;
+            cardWrapper.prepend(cardBaru);
+        });
+    </script>
+
+</body>
+
+</html>
+
