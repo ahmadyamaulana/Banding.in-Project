@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #A8F0E4 0%, #E2FCFA 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #1E1E1E;
+    font-weight: 700;
+}
+
+.nav-btn {
+    padding: 8px 24px;
+    background-color: transparent;
+    border: 2px solid #0A4A9A;
+    color: #0A4A9A;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #0A4A9A;
+    color: white;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.Login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); 
+    text-align: center;
+}
+
+.Login-card h2 {
+    font-size: 28px;
+    color: #1E1E1E;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #0A4A9A;
+}
+
+.input-group input::placeholder {
+    color: #BDBDBD;
+}
+
+.forgot-password {
+    text-align: left;
+    margin-bottom: 24px;
+    margin-top: -5px;
+}
+
+.forgot-password a {
+    font-size: 12px;
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: #0A4A9A;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #083A7A;
+}
+
+.register-link p {
+    font-size: 12px;
+    color: #1E1E1E;
+}
+
+.register-link a {
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
