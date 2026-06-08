@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #B3E2F9;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 3px 10px rgba(54, 54, 54, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    background: #0a66c2;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    display:flex;
+    height:calc(100vh - 60px);
+}
+
+.sidebar {
+    width: 220px;
+    background: #0f172a;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.3);
+}
+
+.sidebar a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.sidebar a:hover {
+    color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #3b82f6;
+}
+
+.content{
+    flex:1;
+    padding:40px;
+}
+
+.card-container{
+    display:flex;
+    gap:40px;
+}
+
+.card{
+    width:220px;
+    height:120px;
+    background:white;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:500;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.card-container .card{
+    text-decoration: none;
+}
+
+.card:hover{
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-tambah {
+    background-color: transparent;
+    border: 2px dashed #0A4A9A; 
+    color: #0A4A9A;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.btn-tambah:hover {
+    background-color: #0A4A9A;
+    color: #ffffff;
+}
+
+/* =========================================
+   GAYA UNTUK CARD TOKO & TOMBOL TAMBAH
+   ========================================= */
+.card-toko {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+.card-toko:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-tambah {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #555;
+    border: 2px dashed #999;
+    transition: 0.3s;
+}
+.btn-tambah:hover {
+    background-color: #f0f0f0;
+}
+
+/* =========================================
+   GAYA UNTUK CARD TOKO & TOMBOL TAMBAH
+   ========================================= */
+.card-toko {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card-toko:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-tambah {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #555;
+    background: white; /* Diubah jadi putih polos sesuai gambar */
+    border: none; /* Dihilangkan border putus-putusnya */
+    transition: all 0.3s ease;
+}
+
+.btn-tambah:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   GAYA UNTUK POPUP MODAL (ANTI NGE-FREEZE)
+   ========================================= */
+.modal-overlay {
+    display: none; /* Wajib none agar tidak menutupi layar saat awal */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-overlay.show {
+    display: flex; 
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #1e1e1e;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.modal-content input:focus {
+    border-color: #0a66c2;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn-batal, .btn-konfirmasi {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-batal {
+    background: #ffe6e6;
+    color: #ff4d4d;
+}
+
+.btn-batal:hover { background: #ffcccc; }
+
+.btn-konfirmasi {
+    background: #0a66c2;
+    color: white;
+}
+
+.btn-konfirmasi:hover { background: #084c94; }
